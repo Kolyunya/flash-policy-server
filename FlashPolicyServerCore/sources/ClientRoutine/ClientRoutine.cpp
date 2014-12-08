@@ -42,5 +42,6 @@ void ClientRoutine::run ( void )
     #endif
 
     socket->close();
+    delete socket;
 
 }
