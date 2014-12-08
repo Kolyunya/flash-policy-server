@@ -1,0 +1,6 @@
+#ifndef INCLUDE_POLICY_FACTORY_HPP
+#define INCLUDE_POLICY_FACTORY_HPP
+
+#include "./../../../sources/PolicyFactory/PolicyFactory.hpp"
+
+#endif // INCLUDE_POLICY_FACTORY_HPP

@@ -1,0 +1,6 @@
+#ifndef INCLUDE_CLIENT_ROUTINE_HPP
+#define INCLUDE_CLIENT_ROUTINE_HPP
+
+#include "./../../../sources/ClientRoutine/ClientRoutine.hpp"
+
+#endif // INCLUDE_CLIENT_ROUTINE_HPP

@@ -1,0 +1,6 @@
+#ifndef INCLUDE_POLICY_SERVER_HPP
+#define INCLUDE_POLICY_SERVER_HPP
+
+#include "./../../../sources/PolicyServer/PolicyServer.hpp"
+
+#endif // INCLUDE_POLICY_SERVER_HPP

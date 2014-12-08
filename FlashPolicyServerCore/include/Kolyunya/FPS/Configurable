@@ -1,0 +1,6 @@
+#ifndef INCLUDE_CONFIGURABLE_HPP
+#define INCLUDE_CONFIGURABLE_HPP
+
+#include "./../../../sources/Configurable/Configurable.hpp"
+
+#endif // INCLUDE_CONFIGURABLE_HPP

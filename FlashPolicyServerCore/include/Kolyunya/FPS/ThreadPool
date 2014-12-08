@@ -1,0 +1,6 @@
+#ifndef INCLUDE_THREAD_POOL_HPP
+#define INCLUDE_THREAD_POOL_HPP
+
+#include "./../../../sources/ThreadPool/ThreadPool.hpp"
+
+#endif // INCLUDE_THREAD_POOL_HPP

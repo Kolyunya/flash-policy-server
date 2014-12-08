@@ -1,0 +1,6 @@
+#ifndef INCLUDE_SOCKET_SERVER_HPP
+#define INCLUDE_SOCKET_SERVER_HPP
+
+#include "./../../../sources/SocketServer/SocketServer.hpp"
+
+#endif // INCLUDE_SOCKET_SERVER_HPP
