@@ -1,4 +1,4 @@
-# Flash policy server
+# Flash policy file server
 
 ## Usage
 
