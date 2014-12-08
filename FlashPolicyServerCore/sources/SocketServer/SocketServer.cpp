@@ -72,12 +72,5 @@ void SocketServer::incomingConnection ( qintptr socketDescriptor )
     ClientRoutine* clientRoutine = new ClientRoutine();
     clientRoutine->setSocketDescriptor(socketDescriptor);
     clientRoutine->setPolicy(policy);
-    QObject::connect
-    (
-        clientRoutine,
-        SIGNAL(finished()),
-        clientRoutine,
-        SLOT(deleteLater())
-    );
     this->threadPool->start(clientRoutine);
 }

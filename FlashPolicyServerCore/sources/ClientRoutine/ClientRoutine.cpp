@@ -39,6 +39,4 @@ void ClientRoutine::run ( void )
     socket->close();
     delete socket;
 
-    emit this->finished();
-
 }

@@ -24,8 +24,6 @@ namespace Kolyunya
             private:
                 qintptr socketDescriptor;
                 QByteArray policy;
-            signals:
-                void finished ( void );
         };
 
     }
