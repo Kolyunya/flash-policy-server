@@ -8,12 +8,6 @@
 
 using namespace Kolyunya::FPS;
 
-ClientRoutine::ClientRoutine ( QObject* parent ) :
-    QObject(parent)
-{
-
-}
-
 void ClientRoutine::setSocketDescriptor ( qintptr socketDescriptor )
 {
     this->socketDescriptor = socketDescriptor;
@@ -41,7 +35,10 @@ void ClientRoutine::run ( void )
             << socket->peerPort();
     #endif
 
+    // Perform a cleanup
     socket->close();
     delete socket;
+
+    emit this->finished();
 
 }

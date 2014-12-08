@@ -18,13 +18,14 @@ namespace Kolyunya
         {
             Q_OBJECT
             public:
-                explicit ClientRoutine ( QObject* parent = nullptr );
                 void setSocketDescriptor ( qintptr socketDescriptor );
                 void setPolicy ( const QByteArray& policy );
                 void run ( void ) override;
             private:
                 qintptr socketDescriptor;
                 QByteArray policy;
+            signals:
+                void finished ( void );
         };
 
     }
