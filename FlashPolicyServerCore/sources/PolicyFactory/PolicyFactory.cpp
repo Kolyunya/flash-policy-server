@@ -1,6 +1,7 @@
-#include <QtCore/QCoreApplication>
 #include <QtCore/QFile>
 #include <QtCore/QTextStream>
+#include <QtCore/QException>
+#include <QtCore/QDebug>
 #include <Kolyunya/FPS/PolicyFactory>
 
 using namespace Kolyunya::FPS;
@@ -46,7 +47,8 @@ void PolicyFactory::getPolicyBlank ( void )
     bool fileOpened = file.open(QFile::ReadOnly|QFile::Text);
     if ( ! fileOpened )
     {
-        QCoreApplication::exit(-1);
+        qDebug() << "Error: policy file unavailable.";
+        throw QException();
     }
     QTextStream stream(&file);
     QString text = stream.readAll();
