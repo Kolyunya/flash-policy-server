@@ -1,5 +1,11 @@
 # Flash policy file server
 
+## Description
+
+This is a crossplatform Qt5 implementation of the Adobe Flash policy file server.
+
+The application is quite flexible and configurable. You can configure which hosts would be allowed to connect to the server and to which ports; which network interface and port the server will listen to; how many threads the thread pool would be allowed to create and after what duration the threads will be deleted.
+
 ## Usage
 
 * Compile the `FlashPolicyServer.pro` project.
