@@ -1,12 +1,9 @@
+#include <QtCore/QDebug>
 #include <QtCore/QCoreApplication>
 #include <QtCore/QThreadPool>
 #include <Kolyunya/FPS/SocketServer>
 #include <Kolyunya/FPS/PolicyFactory>
 #include <Kolyunya/FPS/ClientRoutine>
-
-#ifdef QT_DEBUG
-    #include <QtCore/QDebug>
-#endif
 
 using namespace Kolyunya::FPS;
 
@@ -44,10 +41,8 @@ void SocketServer::launch ( void )
     bool isListening = this->listen(this->hostName,this->port);
 
     // Print debug message
-    #ifdef QT_DEBUG
-        const char* status = isListening ? "started successfully." : "failed to start.";
-        qDebug() << "Flash policy server" << status;
-    #endif
+    const char* status = isListening ? "started successfully." : "failed to start.";
+    qDebug() << "Flash policy server" << status;
 
     // If listening failed
     if ( ! isListening )
