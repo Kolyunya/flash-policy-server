@@ -8,6 +8,9 @@ using namespace Kolyunya::FPS;
 
 PolicyServer::PolicyServer ( int& argc , char** argv ) :
     QCoreApplication(argc,argv),
+    settings(nullptr),
+    threadPool(nullptr),
+    policyFactory(nullptr),
     socketServer(nullptr)
 {
     this->initializeSettings();
