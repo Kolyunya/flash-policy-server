@@ -22,5 +22,6 @@
 !/flash-policy-server.pri
 !/flash-policy-server.pro
 !/flash-policy-server.xml
+!/flash-policy-server.init
 !/LICENSE.txt
 !/README.md
