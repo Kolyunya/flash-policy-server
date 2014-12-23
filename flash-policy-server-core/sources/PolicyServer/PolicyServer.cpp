@@ -24,7 +24,7 @@ PolicyServer::PolicyServer ( int& argc , char** argv ) :
 
 void PolicyServer::initializeSettings ( void )
 {
-    QString settinsFile = "FlashPolicyServer.ini";
+    QString settinsFile = "flash-policy-server.ini";
     bool settingsFileExists = QFile::exists(settinsFile);
     if ( ! settingsFileExists )
     {

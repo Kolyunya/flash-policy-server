@@ -1,8 +1,8 @@
-include(../FlashPolicyServer.pri)
+include(../flash-policy-server.pri)
 
 TEMPLATE = lib
 
-TARGET = FlashPolicyServerCore
+TARGET = flash-policy-server-core
 
 CONFIG += \
     staticlib \

@@ -1,5 +1,5 @@
 INCLUDEPATH += \
-    ../FlashPolicyServerCore/include \
+    ../flash-policy-server-core/include \
 
 QT += \
     core \
