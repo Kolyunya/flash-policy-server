@@ -43,7 +43,7 @@ void PolicyFactory::getAllowedHosts ( void )
 
 void PolicyFactory::getPolicyBlank ( void )
 {
-    QFile file("FlashPolicyServer.xml");
+    QFile file("flash-policy-server.xml");
     bool fileOpened = file.open(QFile::ReadOnly|QFile::Text);
     if ( ! fileOpened )
     {
