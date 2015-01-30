@@ -25,6 +25,7 @@ void ClientRoutine::run ( void )
     QTcpSocket* socket = new QTcpSocket();
     socket->setSocketDescriptor(this->socketDescriptor);
     socket->write(this->policy);
+    socket->write(QByteArray(1, 0));
     socket->flush();
 
     // Print debug message
@@ -35,8 +36,12 @@ void ClientRoutine::run ( void )
             << socket->peerPort();
     #endif
 
-    // Perform a cleanup
-    socket->close();
-    delete socket;
+    QObject::connect
+    (
+        socket,
+        SIGNAL(disconnected()),
+        socket,
+        SLOT(deleteLater())
+    );
 
 }
