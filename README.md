@@ -10,6 +10,6 @@ The application is quite flexible and configurable. You can configure which host
 
 * Compile the `FlashPolicyServer.pro` project.
 * Put `flash-policy-server.ini` and `flash-policy-server.xml` files near the project executable.
-* Alter application configuration if needed (configuration defaults have sensible values already)
+* Alter application configuration if needed (configuration defaults have sensible values already).
 * Run the application executable file.
 * Connect to the server from your Flash clients.
