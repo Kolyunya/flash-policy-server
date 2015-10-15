@@ -1,3 +1,4 @@
+#include <QtCore/QCoreApplication>
 #include <QtCore/QException>
 #include <QtCore/QDebug>
 #include <QtCore/QFile>
@@ -24,15 +25,16 @@ PolicyServer::PolicyServer ( int& argc , char** argv ) :
 
 void PolicyServer::initializeSettings ( void )
 {
-    QString settinsFile = "flash-policy-server.ini";
-    bool settingsFileExists = QFile::exists(settinsFile);
+    QString settingsPath = QCoreApplication::applicationDirPath();
+    QString settingsFile = settingsPath + "/flash-policy-server.ini";
+    bool settingsFileExists = QFile::exists(settingsFile);
     if ( ! settingsFileExists )
     {
         qDebug() << "Error: settings file not found.";
         throw QException();
     }
     QSettings::Format settingsFormat = QSettings::IniFormat;
-    this->settings = new QSettings(settinsFile,settingsFormat,this);
+    this->settings = new QSettings(settingsFile,settingsFormat,this);
 }
 
 void PolicyServer::initializeThreadPool ( void )

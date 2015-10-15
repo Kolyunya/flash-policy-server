@@ -1,3 +1,4 @@
+#include <QtCore/QCoreApplication>
 #include <QtCore/QFile>
 #include <QtCore/QTextStream>
 #include <QtCore/QException>
@@ -43,7 +44,9 @@ void PolicyFactory::getAllowedHosts ( void )
 
 void PolicyFactory::getPolicyBlank ( void )
 {
-    QFile file("flash-policy-server.xml");
+    QString fileDirectory = QCoreApplication::applicationDirPath();
+    QString filePath = fileDirectory + "/flash-policy-server.xml";
+    QFile file(filePath);
     bool fileOpened = file.open(QFile::ReadOnly|QFile::Text);
     if ( ! fileOpened )
     {
