@@ -19,8 +19,9 @@ namespace Kolyunya
                 void setSettings ( QSettings* settings );
             protected:
                 virtual QString getSettingsName ( void ) const = 0;
-                QString getParameterKey ( const QString& parameterName );
                 QVariant getParameter ( const QString& parameterName );
+            private:
+                QString getParameterKey ( const QString& parameterName );
                 QSettings* settings;
         };
 
